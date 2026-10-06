@@ -7,16 +7,47 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
             text-align: center;
-            margin-top: 50px;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
 
-    <h1>Welcome to My Website</h1>
-    <p>This is a small, clean HTML code example.</p>         
+    <main class="container">
+        <h1>Welcome to My Website</h1>
+        <p>This is a small, clean HTML code example.</p>
+        <img src="{{ url_for('static', filename='image/image.png') }}" alt="Sample Image">
+    </main>
 
-<img src="{{ url_for('static', filename='image/image.png') }}" alt="Sample Image">
 </body>
 </html>
